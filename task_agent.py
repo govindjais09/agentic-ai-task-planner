@@ -46,6 +46,7 @@ def summarize_task(tasks):
     
     """
     
+    #model call
     response = client.models.generate_content(
     model="gemini-2.5-flash",
     contents=prompt
@@ -55,4 +56,4 @@ def summarize_task(tasks):
 if __name__ == "__main__":
     task_text = read_task_from_file('tasks.txt')
     summary = summarize_task(task_text)
-    print(f"Task Summary:\n\n{summary}")
+    print(f"Task Summary:\n\n{summary}\n\n")
